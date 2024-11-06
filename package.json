@@ -19,6 +19,7 @@
     "@nuxthub/core": "^0.8.5",
     "drizzle-orm": "^0.36.0",
     "nuxt": "^3.14.0",
+    "nuxt-auth-utils": "^0.5.2",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
   },
@@ -37,5 +38,6 @@
   },
   "lint-staged": {
     "*": "pnpm run lint"
-  }
+  },
+  "packageManager": "pnpm@8.15.6+sha1.8105075ad0aa306138be128c017e9c41e28ecffa"
 }
