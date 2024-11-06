@@ -6,7 +6,16 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   future: { compatibilityVersion: 4 },
   compatibilityDate: '2024-07-30',
-  hub: {},
+  nitro: {
+    imports: {
+      dirs: [
+        'server/utils',
+      ],
+    },
+  },
+  hub: {
+    database: true,
+  },
   eslint: {
     config: {
       stylistic: {
