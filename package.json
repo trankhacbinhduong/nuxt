@@ -9,6 +9,7 @@
     "preview": "npx nuxthub preview",
     "deploy": "npx nuxthub deploy",
     "postinstall": "nuxt prepare",
+    "prepare": "simple-git-hooks",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
   },
@@ -22,8 +23,16 @@
   "devDependencies": {
     "@nuxt/eslint-config": "^0.6.1",
     "eslint": "^9.14.0",
+    "lint-staged": "^15.2.10",
+    "simple-git-hooks": "^2.11.1",
     "typescript": "^5.6.3",
     "vue-tsc": "^2.1.10",
     "wrangler": "^3.84.1"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "pnpm run lint"
   }
 }
