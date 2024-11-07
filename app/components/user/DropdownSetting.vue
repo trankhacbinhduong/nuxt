@@ -44,7 +44,12 @@
 </template>
 
 <script setup lang="ts">
-const { user } = useUserSession()
+const { user, clear } = useUserSession()
+
+const signOut = async () => {
+  await clear()
+  return navigateTo('/account/login')
+}
 
 const items = computed(() => [
   [{
@@ -58,6 +63,9 @@ const items = computed(() => [
   }], [{
     label: 'Sign out',
     icon: 'i-heroicons-arrow-left-on-rectangle',
+    click: async () => {
+      await signOut()
+    },
   }],
 ])
 </script>
