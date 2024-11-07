@@ -17,6 +17,7 @@ export default defineNuxtConfig({
   nitro: {
     experimental: {
       tasks: true,
+      openAPI: true,
     },
     imports: {
       dirs: [
