@@ -6,6 +6,11 @@ export default defineNuxtConfig({
     'nuxt-auth-utils',
     '@nuxt/ui',
   ],
+  imports: {
+    dirs: [
+      '../shared/utils',
+    ],
+  },
   devtools: { enabled: true },
   future: { compatibilityVersion: 4 },
   compatibilityDate: '2024-07-30',
@@ -16,6 +21,7 @@ export default defineNuxtConfig({
     imports: {
       dirs: [
         'server/utils',
+        'shared/utils',
       ],
     },
   },
